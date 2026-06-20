@@ -799,7 +799,7 @@
 
         .carousel-slide img {
             width: 100%;
-            height: 520px;
+            height: 300px;
             object-fit: cover;
             object-position: center center;
             display: block;
@@ -878,8 +878,7 @@
 
         @media (max-width: 600px) {
             .carousel-slide img {
-                height: 100svh;
-                max-height: 100svh;
+                height: 220px;
                 object-fit: cover;
                 object-position: center center;
             }
@@ -891,8 +890,54 @@
 
         @media (min-width: 601px) and (max-width: 930px) {
             .carousel-slide img {
-                height: 420px;
+                height: 260px;
             }
+        }
+
+        /* ── Conditions de réservation ── */
+        .conditions-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .conditions-table tr {
+            border-bottom: 1px solid rgba(210, 157, 89, 0.2);
+        }
+
+        .conditions-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .conditions-table td:first-child {
+            width: 44px;
+            padding: 14px 10px 14px 14px;
+            font-size: 1.2rem;
+            vertical-align: middle;
+        }
+
+        .conditions-table td:nth-child(2) {
+            padding: 14px 14px 14px 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffd999;
+            width: 180px;
+            vertical-align: middle;
+        }
+
+        .conditions-table td:last-child {
+            padding: 14px 14px 14px 0;
+            font-size: 0.9rem;
+            color: #ddd2be;
+            vertical-align: middle;
+        }
+
+        .conditions-wrap {
+            background: rgba(18, 18, 18, 0.95);
+            border: 1px solid var(--line);
+            border-left: 5px solid var(--accent);
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         /* ── Site Footer ── */
@@ -1318,7 +1363,42 @@
             </p>
         </section>
 
-<section class="section" id="transport">
+<section class="section" id="conditions">
+            <h2>Conditions de r&eacute;servation</h2>
+            <p class="lead">Voici ce dont nous avons besoin pour que la prestation se d&eacute;roule dans les meilleures conditions.</p>
+
+            <div class="conditions-wrap">
+                <table class="conditions-table">
+                    <tr>
+                        <td>&#128085;</td>
+                        <td>Loge</td>
+                        <td>1 espace pour se changer et s&apos;&eacute;tirer avant le spectacle (coulisse, pi&egrave;ce att&eacute;nante, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td>&#127925;</td>
+                        <td>Sonorisation</td>
+                        <td>Contact avec le DJ ou le responsable son du lieu. Si nous devons venir avec notre propre sono, un suppl&eacute;ment s&apos;applique.</td>
+                    </tr>
+                    <tr>
+                        <td>&#128203;</td>
+                        <td>Espace de sc&egrave;ne</td>
+                        <td>Un espace suffisamment grand en fonction du nombre de danseuses retenu (6, 16 ou 20 artistes).</td>
+                    </tr>
+                    <tr>
+                        <td>&#128176;</td>
+                        <td>Acompte obligatoire</td>
+                        <td>Un acompte est demand&eacute; pour confirmer et bloquer la date dans notre agenda.</td>
+                    </tr>
+                    <tr>
+                        <td>&#127968;</td>
+                        <td>Paiement</td>
+                        <td>Uniquement par <strong style="color:#ffd999">virement bancaire</strong> ou <strong style="color:#ffd999">esp&egrave;ces</strong>. Aucun autre mode de paiement accept&eacute;.</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="section" id="transport">
             <h2>Frais de transport</h2>
             <p class="lead">Les frais de transport sont <strong style="color:#ffd999">obligatoires</strong> et inclus syst&eacute;matiquement dans toute proposition.</p>
 
