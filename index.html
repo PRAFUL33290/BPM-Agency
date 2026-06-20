@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectacle Bollywood &mdash; Soir&eacute;e d'entreprise BPM Agency | Pullman Bordeaux &mdash; 12 d&eacute;cembre 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://parvati-india.fr">
+    <link rel="preload" as="image" href="https://parvati-india.fr/wp-content/uploads/2023/10/Devotional-Background-For-god-worship-Animation-video.00_00_09_20.Still001.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" fetchpriority="high">
+    <link rel="preload" as="image" href="https://parvati-india.fr/wp-content/uploads/2026/01/LOGO-BOLLYWOOD.png" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-1: #000000;
+            --bg-2: #130d08;
+            --card: rgba(0, 0, 0, 0.92);
+            --ink: #f5f2eb;
+            --muted: #c4beb4;
+            --primary: #b90d01;
+            --primary-deep: #8f0c02;
+            --accent: #d29d59;
+            --line: rgba(210, 157, 89, 0.25);
+            --white: #ffffff;
+            --success: #1f9b6b;
+            --shadow: 0 16px 40px rgba(0, 0, 0, 0.42);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Manrope", sans-serif;
+            color: var(--ink);
+            background: linear-gradient(140deg, var(--bg-1), var(--bg-2));
+            min-height: 100vh;
+            line-height: 1.55;
+            padding: 20px;
+        }
+
+        /* Fond fixe via pseudo-element : GPU-composité, zéro repaint au scroll */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 10% 15%, rgba(210, 157, 89, 0.18), transparent 40%),
+                radial-gradient(circle at 90% 10%, rgba(185, 13, 1, 0.2), transparent 42%),
+                linear-gradient(135deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+                url("https://parvati-india.fr/wp-content/uploads/2023/10/Devotional-Background-For-god-worship-Animation-video.00_00_09_20.Still001.jpg") center/cover;
+            background-color: var(--bg-2);
+        }
+
+        .page {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: var(--card);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--accent);
+        }
+
+        .hero {
+            padding: 42px 32px 30px;
+            background:
+                linear-gradient(130deg, rgba(185, 13, 1, 0.9), rgba(143, 12, 2, 0.82)),
+                url("https://parvati-india.fr/wp-content/uploads/2023/10/Devotional-Background-For-god-worship-Animation-video.00_00_09_20.Still001.jpg") center/cover;
+            color: var(--white);
+            border-bottom: 2px solid var(--accent);
+            text-align: center;
+        }
+
+        .hero-logo {
+            width: min(320px, 70vw);
+            margin: 0 auto 2px;
+            display: block;
+        }
+
+        .hero-bollywood {
+            width: min(200px, 48vw);
+            margin: 0 auto 14px;
+            display: block;
+        }
+
+        .event-pill {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(210, 157, 89, 0.75);
+            color: #ffe4b5;
+            font-size: 0.84rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-radius: 999px;
+            padding: 6px 14px;
+            margin-bottom: 14px;
+            animation: appear 0.45s ease;
+        }
+
+        h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.55rem, 3.2vw, 2.5rem);
+            line-height: 1.2;
+            margin-bottom: 10px;
+            animation: appear 0.55s ease;
+        }
+
+        .hero-sub {
+            color: #f8dfb1;
+            max-width: 780px;
+            margin: 0 auto 24px;
+            font-size: 1rem;
+            animation: appear 0.65s ease;
+        }
+
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            animation: lift 0.6s ease;
+        }
+
+        .formula-card {
+            background: rgba(0, 0, 0, 0.8);
+            color: #f7f0e1;
+            border-radius: 14px;
+            border: 2px solid rgba(210, 157, 89, 0.45);
+            padding: 18px;
+            min-height: 180px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .formula-card.featured {
+            border-color: var(--accent);
+            box-shadow: 0 10px 24px rgba(185, 13, 1, 0.3);
+        }
+
+        .formula-label {
+            font-size: 0.76rem;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .formula-artists {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.45rem, 2.7vw, 2rem);
+            line-height: 1.2;
+            color: #ffffff;
+        }
+
+        .formula-detail {
+            font-size: 0.95rem;
+            color: #ddd2be;
+            font-weight: 600;
+        }
+
+        .formula-price {
+            margin-top: 4px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ffd999;
+        }
+
+        .cta-row {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-weight: 800;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-deep);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border-color: rgba(210, 157, 89, 0.9);
+            color: #ffe0ad;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .section {
+            padding: 34px 32px;
+            border-top: 1px solid var(--line);
+            background: rgba(10, 10, 10, 0.85);
+            /* Les animations sont déclenchées via JS (IntersectionObserver) */
+            opacity: 1;
+        }
+
+        .section.will-animate {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.45s ease, transform 0.45s ease;
+        }
+
+        .section.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+            margin-bottom: 8px;
+        }
+
+        .section p.lead {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: rgba(22, 22, 22, 0.95);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        th {
+            background: rgba(185, 13, 1, 0.2);
+            color: var(--accent);
+            text-align: left;
+            padding: 12px 14px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-bottom: 1px solid var(--line);
+        }
+
+        td {
+            padding: 13px 14px;
+            border-bottom: 1px solid rgba(210, 157, 89, 0.2);
+            vertical-align: top;
+            font-size: 0.95rem;
+            color: #eee3cf;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .strong {
+            font-weight: 800;
+        }
+
+        .option-box {
+            margin-top: 16px;
+            background: rgba(185, 13, 1, 0.14);
+            border: 1px solid rgba(210, 157, 89, 0.4);
+            border-left: 5px solid var(--accent);
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+        .option-title {
+            font-weight: 800;
+            color: #ffdca8;
+            margin-bottom: 4px;
+        }
+
+        .chips {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            background: rgba(0, 0, 0, 0.65);
+            border: 1px solid rgba(210, 157, 89, 0.35);
+            border-radius: 999px;
+            padding: 6px 11px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: #f3d39b;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: rgba(18, 18, 18, 0.92);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .media-grid img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+        }
+
+        .video-wrap {
+            margin-top: 14px;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+        }
+
+        .video-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-panel {
+            background: rgba(10, 10, 10, 0.96);
+            color: #edf4f6;
+            border-radius: 14px;
+            padding: 20px;
+            display: grid;
+            gap: 10px;
+            border: 1px solid var(--accent);
+        }
+
+        .contact-panel h3 {
+            font-family: "Cinzel", serif;
+            font-size: 1.2rem;
+        }
+
+        .contact-line {
+            color: #e8d7bc;
+            font-weight: 600;
+        }
+
+        .contact-line a {
+            color: #ffd080;
+            text-decoration: none;
+        }
+
+        .contact-line a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.86rem;
+            color: #c5a77f;
+            padding: 0 20px 26px;
+            background: rgba(10, 10, 10, 0.85);
+        }
+
+        @keyframes appear {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes lift {
+            from { opacity: 0; transform: translateY(16px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @media (max-width: 930px) {
+            .formula-grid,
+            .grid-2,
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .section {
+                padding: 24px 18px;
+            }
+
+            .media-grid img {
+                height: 220px;
+            }
+
+            table {
+                min-width: 560px;
+            }
+
+            .init-cards-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .spec-cards-row {
+                grid-template-columns: repeat(2, minmax(0, 260px));
+            }
+
+            .cta-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .formula-card {
+                min-height: auto;
+            }
+
+            .global-total-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .global-total-item-price {
+                margin-left: 0;
+            }
+        }
+
+        /* ── Initiations Card Grid ── */
+        .initiation-grid-wrap {
+            display: grid;
+            gap: 20px;
+        }
+
+        .initiation-grid-hint {
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .init-duration-label {
+            font-family: "Cinzel", serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffd999;
+            margin-bottom: 14px;
+            padding: 10px 16px;
+            background: rgba(185, 13, 1, 0.18);
+            border-left: 5px solid var(--accent);
+            border-radius: 8px;
+            letter-spacing: 0.03em;
+        }
+
+        .init-cards-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .init-card {
+            background: rgba(18, 18, 18, 0.92);
+            border: 2px solid rgba(210, 157, 89, 0.25);
+            border-radius: 14px;
+            padding: 20px 16px;
+            cursor: pointer;
+            font-family: "Manrope", sans-serif;
+            text-align: center;
+            transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+            position: relative;
+            outline: none;
+        }
+
+        .init-card:hover:not(.active) {
+            border-color: var(--accent);
+            background: rgba(30, 20, 10, 0.95);
+            transform: translateY(-2px);
+        }
+
+        .init-card.active {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, rgba(185, 13, 1, 0.22), rgba(143, 12, 2, 0.14));
+            box-shadow: 0 8px 24px rgba(185, 13, 1, 0.28);
+            transform: translateY(-2px);
+        }
+
+        .init-card.active::after {
+            content: "✓";
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            font-size: 0.82rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .init-card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .init-card-icon svg {
+            width: 34px;
+            height: 34px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .init-card-audience {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            margin-bottom: 10px;
+        }
+
+        .init-card.active .init-card-audience {
+            color: #ffd999;
+        }
+
+        .init-card-price {
+            font-family: "Cinzel", serif;
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: #ffd999;
+            line-height: 1;
+        }
+
+        .init-card.active .init-card-price {
+            color: #ffffff;
+        }
+
+        .init-card-currency {
+            font-size: 1rem;
+        }
+
+        /* ── Bulle flottante total ── */
+        .floating-total {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: #000000;
+            border: 2px solid rgba(210, 157, 89, 0.6);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 0 4px rgba(210, 157, 89, 0.12);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1px;
+            color: #ffffff;
+            z-index: 9999;
+            cursor: default;
+            opacity: 0;
+            transform: scale(0.6) translateY(16px);
+            pointer-events: none;
+            transition: opacity 0.28s cubic-bezier(.4,0,.2,1), transform 0.28s cubic-bezier(.4,0,.2,1);
+        }
+
+        .floating-total.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            pointer-events: auto;
+        }
+
+        .floating-total-label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(210, 157, 89, 0.9);
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .floating-total-amount {
+            font-family: "Cinzel", serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .floating-total-currency {
+            font-size: 0.62rem;
+            color: rgba(255,255,255,0.65);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 600px) {
+            .floating-total {
+                width: 74px;
+                height: 74px;
+                bottom: 16px;
+                right: 16px;
+            }
+            .floating-total-amount {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ── Spectacle cards : 3 colonnes centrees ── */
+        .spec-cards-row {
+            grid-template-columns: repeat(3, minmax(0, 260px));
+            justify-content: center;
+        }
+
+        @media (max-width: 600px) {
+            .init-cards-row {
+                grid-template-columns: 1fr;
+            }
+            .spec-cards-row {
+                grid-template-columns: 1fr;
+                justify-content: unset;
+            }
+            .section {
+                padding: 20px 14px;
+            }
+            .hero {
+                padding: 28px 14px 22px;
+            }
+            h1 {
+                font-size: 1.35rem;
+            }
+            .formula-price {
+                font-size: 1.2rem;
+            }
+            .init-card {
+                padding: 16px 12px;
+            }
+            .global-total-banner {
+                padding: 18px 16px;
+            }
+
+            /* ── Mobile : plein écran, pas de bords ── */
+            body {
+                padding: 0;
+                background: #000000;
+            }
+
+            body::before {
+                display: none;
+            }
+            .page {
+                border-radius: 0;
+                border: none;
+                box-shadow: none;
+            }
+            /* Cacher les prix dans le hero (déjà affichés dans la sélection) */
+            .formula-grid .formula-price,
+            .hero-formula-note {
+                display: none;
+            }
+        }
+
+        /* ── Total callout hint ── */
+        .total-callout-hint {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(210, 157, 89, 0.10);
+            border: 1px solid rgba(210, 157, 89, 0.45);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #f3d39b;
+        }
+
+        .total-callout-hint .hint-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Global Total Banner ── */
+        .global-total-banner {
+            background: linear-gradient(135deg, rgba(185, 13, 1, 0.22), rgba(0, 0, 0, 0.7));
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 24px 28px;
+        }
+
+        .global-total-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .global-total-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .global-total-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            background: rgba(0, 0, 0, 0.32);
+            border: 1px solid rgba(210, 157, 89, 0.28);
+            border-radius: 10px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: #f3d39b;
+        }
+
+        .global-total-item-price {
+            font-weight: 800;
+            color: #ffd999;
+            white-space: nowrap;
+            margin-left: 16px;
+        }
+
+        .global-total-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(210, 157, 89, 0.45);
+            padding-top: 16px;
+            font-family: "Cinzel", serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffd999;
+        }
+
+        .global-total-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            transition: opacity 0.15s ease;
+        }
+
+        /* ── Carrousel ── */
+        .carousel-section {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+            line-height: 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+            will-change: scroll-position;
+        }
+        .carousel-track:active { cursor: grabbing; }
+        .carousel-track::-webkit-scrollbar { display: none; }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            position: relative;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            line-height: 0;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 22px 28px 18px;
+            background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        .carousel-caption span {
+            color: var(--accent);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background: rgba(0,0,0,0.55);
+            border: 1px solid rgba(210,157,89,0.45);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.18s, border-color 0.18s;
+            color: #fff;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(185,13,1,0.75);
+            border-color: var(--accent);
+        }
+
+        .carousel-btn-prev { left: 14px; }
+        .carousel-btn-next { right: 14px; }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 7px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            border: none;
+        }
+
+        .carousel-dot.active {
+            background: var(--accent);
+            transform: scale(1.35);
+        }
+
+        @media (max-width: 600px) {
+            .carousel-slide img {
+                height: 100svh;
+                max-height: 100svh;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .carousel-btn {
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 930px) {
+            .carousel-slide img {
+                height: 420px;
+            }
+        }
+
+        /* ── Site Footer ── */
+        .site-footer {
+            background: #000000;
+            border-top: 2px solid rgba(210, 157, 89, 0.4);
+            padding: 40px 36px 24px;
+        }
+
+        .site-footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid rgba(210, 157, 89, 0.2);
+        }
+
+        .sf-col-title {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .sf-logo {
+            width: 130px;
+            margin-bottom: 12px;
+            display: block;
+            opacity: 0.92;
+        }
+
+        .sf-tagline {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #c4a87a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .sf-sub {
+            font-size: 0.78rem;
+            color: #7a6a5a;
+            font-style: italic;
+            margin-bottom: 14px;
+        }
+
+        .sf-address {
+            font-size: 0.8rem;
+            color: #9a8a78;
+            line-height: 1.7;
+        }
+
+        .sf-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sf-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: #9a8878;
+            line-height: 1.5;
+        }
+
+        .sf-list li::before {
+            content: "•";
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .sf-list li strong {
+            color: #c4a87a;
+        }
+
+        .sf-list a {
+            color: #c4a87a;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .sf-list a:hover {
+            color: #ffd999;
+            text-decoration: underline;
+        }
+
+        .sf-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 18px;
+            font-size: 0.74rem;
+            color: #5a4e42;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sf-bottom a {
+            color: #7a6a5a;
+            text-decoration: none;
+        }
+
+        .sf-bottom a:hover {
+            color: var(--accent);
+        }
+
+        /* ── Validation form ── */
+        .validation-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .validation-layout .global-total-banner {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 760px) {
+            .validation-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .validation-form {
+            display: grid;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .validation-input {
+            width: 100%;
+            background: rgba(18, 18, 18, 0.95);
+            border: 1px solid rgba(210, 157, 89, 0.4);
+            border-radius: 10px;
+            padding: 12px 16px;
+            color: #f5f2eb;
+            font-family: "Manrope", sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .validation-input:focus {
+            border-color: var(--accent);
+        }
+
+        .validation-input::placeholder {
+            color: rgba(196, 190, 180, 0.45);
+        }
+
+        textarea.validation-input {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        /* ── Footer confirmed engraving ── */
+        .sf-engraved {
+            margin-bottom: 28px;
+            padding: 20px;
+            background: rgba(185, 13, 1, 0.1);
+            border: 1px solid rgba(210, 157, 89, 0.35);
+            border-top: 3px solid var(--accent);
+            border-radius: 12px;
+        }
+
+        .sf-engraved-title {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .sf-engraved-content {
+            font-size: 0.83rem;
+            color: #c4beb4;
+            line-height: 1.9;
+            white-space: pre-line;
+        }
+
+        @media (max-width: 860px) {
+            .site-footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .site-footer {
+                padding: 28px 18px 18px;
+            }
+            .site-footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .sf-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header class="hero">
+            <img class="hero-logo" src="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" alt="Logo Parvati India">
+            <img class="hero-bollywood" src="https://parvati-india.fr/wp-content/uploads/2026/01/LOGO-BOLLYWOOD.png" alt="Logo Bollywood">
+            <div class="event-pill">Soir&eacute;e d'entreprise &mdash; Pullman Bordeaux &mdash; 12 d&eacute;cembre 2026</div>
+            <h1>Proposition de spectacle Bollywood</h1>
+            <p class="hero-sub">
+                Pr&eacute;par&eacute;e pour <strong>BPM Agency</strong> &mdash; un spectacle haut en couleurs pour vos <strong>230 convives</strong>, &agrave; programmer entre <strong>19h00 et 1h00</strong>.
+                Trois configurations au choix&nbsp;: <strong>6 danseuses</strong>, <strong>16 artistes</strong> ou <strong>20 artistes</strong>. S&eacute;lectionnez la formule qui correspond &agrave; votre &eacute;v&eacute;nement.
+            </p>
+
+            <div class="formula-grid" aria-label="Trois formules principales de spectacle">
+                <article class="formula-card">
+                    <div class="formula-label">Formule essentielle</div>
+                    <div class="formula-artists">6 danseuses</div>
+                    <div class="formula-detail">Troupe de 6 danseuses</div>
+                    <div class="formula-detail">Dur&eacute;e : 15&ndash;20 minutes</div>
+                    <div class="formula-price">400 EUR</div>
+                </article>
+
+                <article class="formula-card">
+                    <div class="formula-label">Formule spectacle</div>
+                    <div class="formula-artists">16 artistes</div>
+                    <div class="formula-detail">15 danseuses + 1 danseur</div>
+                    <div class="formula-detail">Dur&eacute;e : 15&ndash;20 minutes</div>
+                    <div class="formula-price">560 EUR</div>
+                </article>
+
+                <article class="formula-card featured">
+                    <div class="formula-label">Formule grand spectacle</div>
+                    <div class="formula-artists">20 artistes</div>
+                    <div class="formula-detail">19 danseuses + 1 danseur</div>
+                    <div class="formula-detail">Dur&eacute;e : 15&ndash;20 minutes</div>
+                    <div class="formula-price">680 EUR</div>
+                    <div class="hero-formula-note" style="font-size:0.75rem;color:rgba(255,217,153,0.9);font-weight:700;margin-top:4px">&#10003; Recommand&eacute;e pour 230 convives</div>
+                </article>
+            </div>
+
+            <div class="cta-row">
+                <a class="btn btn-primary" href="mailto:contact@parvati-india.fr?subject=Spectacle%20Bollywood%20-%20Soir%C3%A9e%20BPM%20Agency%20-%20Pullman%20Bordeaux%2012%2F12%2F2026">Demander une proposition</a>
+                <a class="btn btn-secondary" href="tel:0631321053">Appeler: 06 31 32 10 53</a>
+            </div>
+        </header>
+
+        <!-- Carrousel photos — Spectacle Bollywood Parvati India -->
+        <div class="carousel-section" aria-label="Photos du spectacle Bollywood" role="region">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                    <img src="img/1ed56634-3815-49d9-8b32-d6ad55071dee.JPG" alt="Spectacle Bollywood — le public danse avec les artistes" loading="eager">
+                    <div class="carousel-caption">Spectacle Bollywood &mdash; <span>Parvati India</span> &mdash; Le public danse avec les artistes</div>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="img/c4e75149-1a5a-4fec-b846-2ff401f2156e.JPG" alt="Danse Bollywood en couleurs" loading="lazy" decoding="async">
+                    <div class="carousel-caption">Spectacle Bollywood &mdash; <span>Parvati India</span> &mdash; Une chor&eacute;graphie haute en couleurs</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/de5d9e0e-ebca-40fd-8d85-6434ee4daf6f.JPG" alt="Solo danseur Bollywood" loading="lazy" decoding="async" style="object-position: center top;">
+                    <div class="carousel-caption">Spectacle Bollywood &mdash; <span>Parvati India</span> &mdash; Solo Bollywood</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/edc1c459-09dd-4098-bcae-f5b792944e44.JPG" alt="Soirée festive Bollywood" loading="lazy" decoding="async">
+                    <div class="carousel-caption">Spectacle Bollywood &mdash; <span>Parvati India</span> &mdash; Une soir&eacute;e conviviale et festive</div>
+                </div>
+            </div>
+
+            <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Photo précédente">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Photo suivante">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigation du carrousel"></div>
+        </div>
+
+        <section class="section" id="spectacle">
+            <h2>Spectacle Bollywood</h2>
+            <p class="lead">
+                Le spectacle peut être présenté avec <span class="strong">6 danseuses</span> pour une formule essentielle, avec <span class="strong">16 artistes</span> ou en version <span class="strong">grand spectacle avec 20 artistes</span> pour un effet encore plus spectaculaire &mdash; id&eacute;al pour animer une soir&eacute;e de 230 convives au Pullman Bordeaux. Chaque repr&eacute;sentation dure entre <strong>15 et 20&nbsp;minutes</strong> et inclut un moment interactif o&ugrave; <strong>vos invit&eacute;s sont convi&eacute;s &agrave; danser</strong> avec les artistes.
+            </p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Formule</th>
+                            <th>Composition</th>
+                            <th>Dur&eacute;e</th>
+                            <th>Tarif</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="strong">Formule essentielle</td>
+                            <td><span class="strong">6 danseuses</span></td>
+                            <td>15&ndash;20 min</td>
+                            <td class="strong">400 EUR<br><span style="font-size:0.75rem;font-weight:600;color:rgba(210,157,89,0.8)">+ 30 EUR transport = 430 EUR</span></td>
+                        </tr>
+                        <tr>
+                            <td class="strong">Formule spectacle</td>
+                            <td><span class="strong">15 danseuses + 1 danseur (16 artistes)</span></td>
+                            <td>15&ndash;20 min</td>
+                            <td class="strong">560 EUR<br><span style="font-size:0.75rem;font-weight:600;color:rgba(210,157,89,0.8)">+ 30 EUR transport = 590 EUR</span></td>
+                        </tr>
+                        <tr>
+                            <td class="strong">Formule grand spectacle</td>
+                            <td><span class="strong">19 danseuses + 1 danseur (20 artistes)</span></td>
+                            <td>15&ndash;20 min</td>
+                            <td class="strong">680 EUR<br><span style="font-size:0.75rem;font-weight:600;color:rgba(210,157,89,0.8)">+ 30 EUR transport = 710 EUR</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3 style="font-family:'Cinzel',serif;font-size:clamp(1.05rem,2.2vw,1.4rem);color:#ffd999;margin-bottom:6px">S&eacute;lectionnez votre formule</h3>
+                <p class="initiation-grid-hint" style="margin-bottom: 12px;">Un seul choix possible &mdash; cliquer &agrave; nouveau d&eacute;s&eacute;lectionne.</p>
+                <div class="init-cards-row spec-cards-row" role="group" aria-label="S&eacute;lection du spectacle">
+                    <button class="init-card" data-type="spectacle" data-label="6 danseuses" data-detail="Troupe de 6 danseuses" data-price="400">
+                        <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2.5"/><path d="M12 7v5"/><path d="M8 9l4 2 4-2"/><path d="M7 8.5l-2-1.5M17 8.5l2-1.5"/><path d="M10 12l-2 6.5M14 12l2 6.5"/></svg></span>
+                        <div class="init-card-audience">6 danseuses</div>
+                        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;font-weight:600;">Formule essentielle</div>
+                        <div class="init-card-price">400 <span class="init-card-currency">EUR</span></div>
+                    </button>
+                    <button class="init-card" data-type="spectacle" data-label="16 artistes" data-detail="15 danseuses + 1 danseur" data-price="560">
+                        <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2.5"/><path d="M12 7v5"/><path d="M8 9l4 2 4-2"/><path d="M7 8.5l-2-1.5M17 8.5l2-1.5"/><path d="M10 12l-2 6.5M14 12l2 6.5"/></svg></span>
+                        <div class="init-card-audience">16 artistes</div>
+                        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;font-weight:600;">15 danseuses + 1 danseur</div>
+                        <div class="init-card-price">560 <span class="init-card-currency">EUR</span></div>
+                    </button>
+                    <button class="init-card" data-type="spectacle" data-label="20 artistes" data-detail="19 danseuses + 1 danseur" data-price="680">
+                        <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2.5"/><path d="M12 7v5"/><path d="M8 9l4 2 4-2"/><path d="M7 8.5l-2-1.5M17 8.5l2-1.5"/><path d="M10 12l-2 6.5M14 12l2 6.5"/></svg></span>
+                        <div class="init-card-audience">20 artistes</div>
+                        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:10px;font-weight:600;">19 danseuses + 1 danseur</div>
+                        <div class="init-card-price">680 <span class="init-card-currency">EUR</span></div>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section" id="initiations">
+            <h2>Initiations danse Bollywood <span style="font-size:0.7em;color:var(--muted);font-weight:600">(option)</span></h2>
+            <p class="lead">En option, prolongez l'exp&eacute;rience&nbsp;: un atelier participatif o&ugrave; vos convives apprennent une courte chor&eacute;graphie Bollywood &mdash; et dansent vraiment avec les artistes ! Id&eacute;al pour animer la soir&eacute;e. Cliquez sur la formule qui vous convient.</p>
+
+            <div class="initiation-grid-wrap">
+                <p class="initiation-grid-hint">Vous pouvez s&eacute;lectionner <strong>plusieurs prestations</strong> &mdash; le total se met &agrave; jour automatiquement.</p>
+
+                <div>
+                    <div class="init-duration-label">30 minutes</div>
+                    <div class="init-cards-row" role="group" aria-label="Formules 30 minutes">
+                        <button class="init-card" data-audience="Enfants" data-duration="30" data-price="70">
+                            <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/><path d="M9 11.5l1.5 3h3l1.5-3"/></svg></span>
+                            <div class="init-card-audience">Enfants</div>
+                            <div class="init-card-price">70 <span class="init-card-currency">EUR</span></div>
+                        </button>
+                        <button class="init-card" data-audience="Adultes" data-duration="30" data-price="100">
+                            <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></span>
+                            <div class="init-card-audience">Adultes</div>
+                            <div class="init-card-price">100 <span class="init-card-currency">EUR</span></div>
+                        </button>
+                        <button class="init-card" data-audience="Mixte" data-duration="30" data-price="80">
+                            <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="6" r="3"/><path d="M2 21v-2a6 6 0 0 1 12 0v2"/><circle cx="18" cy="6" r="3"/><path d="M17 21v-2a5.9 5.9 0 0 0-3-5.2"/></svg></span>
+                            <div class="init-card-audience">Mixte</div>
+                            <div class="init-card-price">100 <span class="init-card-currency">EUR</span></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="init-duration-label">1 heure</div>
+                    <div class="init-cards-row" role="group" aria-label="Formules 1 heure">
+                        <button class="init-card" data-audience="Enfants" data-duration="60" data-price="100">
+                            <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/><path d="M9 11.5l1.5 3h3l1.5-3"/></svg></span>
+                            <div class="init-card-audience">Enfants</div>
+                            <div class="init-card-price">100 <span class="init-card-currency">EUR</span></div>
+                        </button>
+                        <button class="init-card" data-audience="Adultes" data-duration="60" data-price="120">
+                            <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></span>
+                            <div class="init-card-audience">Adultes</div>
+                            <div class="init-card-price">120 <span class="init-card-currency">EUR</span></div>
+                        </button>
+                        <button class="init-card" data-audience="Mixte" data-duration="60" data-price="120">
+                            <span class="init-card-icon"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="6" r="3"/><path d="M2 21v-2a6 6 0 0 1 12 0v2"/><circle cx="18" cy="6" r="3"/><path d="M17 21v-2a5.9 5.9 0 0 0-3-5.2"/></svg></span>
+                            <div class="init-card-audience">Mixte</div>
+                            <div class="init-card-price">120 <span class="init-card-currency">EUR</span></div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<section class="section" id="transport">
+            <h2>Frais de transport</h2>
+            <p class="lead">Les frais de transport sont <strong style="color:#ffd999">obligatoires</strong> et inclus syst&eacute;matiquement dans toute proposition.</p>
+
+            <div class="option-box" style="margin-top:0;border-left-color:var(--primary)" id="transportBox">
+                <div class="option-title" style="font-size:1rem" id="transportTitle">&#128663;&nbsp; Le Pian-M&eacute;doc &harr; Pullman Bordeaux &mdash; 2 voitures, aller/retour</div>
+                <p style="color:#ddd2be;font-size:0.9rem;margin-top:8px" id="transportDesc">
+                    Trajet aller simple estim&eacute;&nbsp;: <strong>18&nbsp;km</strong>. Aller/retour par voiture&nbsp;: 36&nbsp;km. Total 2 voitures&nbsp;: <strong>72&nbsp;km</strong>.
+                </p>
+                <div class="chips" style="margin-top:12px" id="transportChips">
+                    <span class="chip">&#128205; Le Pian-M&eacute;doc</span>
+                    <span class="chip">&harr;</span>
+                    <span class="chip">&#128205; Pullman Bordeaux</span>
+                    <span class="chip">&#10005; 2 voitures</span>
+                    <span class="chip">Aller / retour</span>
+                </div>
+                <div style="margin-top:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:14px;border-top:1px solid rgba(210,157,89,0.3)">
+                    <div style="font-size:0.84rem;color:var(--muted);line-height:1.7" id="transportCalc">
+                        72&nbsp;km &times; 0,40&nbsp;EUR/km (bar&egrave;me kilom&eacute;trique) &mdash; arrondi
+                    </div>
+                    <div>
+                        <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);font-weight:800;text-align:right">Forfait transport</div>
+                        <div style="font-family:'Cinzel',serif;font-size:1.8rem;font-weight:800;color:#ffd999;line-height:1.1" id="transportFeeDisplay">30&nbsp;<span style="font-size:1rem">EUR</span></div>
+                    </div>
+                </div>
+                <p style="font-size:0.8rem;color:rgba(255,160,80,0.85);margin-top:12px;font-weight:700">
+                    &#9888;&#65039;&nbsp;Frais obligatoires &mdash; ajout&eacute;s automatiquement au total
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="grid-2">
+                <article class="card">
+                    <h2>Pr&eacute;sentation</h2>
+                    <p>
+                        <span class="strong">Parvati India</span> propose des spectacles et initiations de danse Bollywood inspir&eacute;s
+                        du cin&eacute;ma indien, adapt&eacute;s aux <strong>soir&eacute;es et &eacute;v&eacute;nements d'entreprise</strong>, galas et festivals.
+                        Chaque prestation invite vos convives &agrave; <strong>participer et &agrave; danser</strong> avec les artistes.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h2>Contexte &eacute;v&eacute;nement</h2>
+                    <p><span class="strong">Soir&eacute;e d'entreprise &mdash; BPM Agency</span></p>
+                    <p>Lieu&nbsp;: Pullman Bordeaux, Avenue Jean-Gabriel Domergue, 33300 Bordeaux</p>
+                    <p>Date&nbsp;: 12/12/2026</p>
+                    <p>Horaires&nbsp;: 19h00 &ndash; 1h00 (spectacle &agrave; programmer dans cette tranche)</p>
+                    <p>Nombre de personnes&nbsp;: 230</p>
+                    <p>Prestation&nbsp;: spectacle de danse Bollywood</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="grid-2">
+                <article class="card">
+                    <h2>Informations pratiques</h2>
+                    <p>Espace minimum de danse (zone d&eacute;gag&eacute;e et s&eacute;curis&eacute;e).</p>
+                    <p>Syst&egrave;me de sonorisation adapt&eacute; &agrave; la salle.</p>
+                    <p>Espace pour se changer avant la prestation.</p>
+                </article>
+
+                <article class="card">
+                    <h2>&Agrave; l'attention de</h2>
+                    <p><span class="strong">BPM Agency</span></p>
+                    <p>Fanny Servant</p>
+                    <p>Email&nbsp;: <a href="mailto:fanny.servant@bpmagency.fr" style="color:#ffd080;text-decoration:none">fanny.servant@bpmagency.fr</a></p>
+                    <p>T&eacute;l&nbsp;: <a href="tel:0749230912" style="color:#ffd080;text-decoration:none">07 49 23 09 12</a></p>
+                    <p>5 Imp de la Colombette, 31000 Toulouse</p>
+                    <p><a href="https://bpmagency.fr" target="_blank" rel="noopener noreferrer" style="color:#ffd080;text-decoration:none">bpmagency.fr</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="contact-panel">
+                <h3>Contact</h3>
+                <p class="contact-line">Parvati India</p>
+                <p class="contact-line">Julien Guerrier</p>
+                <p class="contact-line">Telephone: <a href="tel:0631321053">06 31 32 10 53</a></p>
+                <p class="contact-line">Email: <a href="mailto:contact@parvati-india.fr">contact@parvati-india.fr</a></p>
+                <p class="contact-line">Site web: <a href="https://parvati-india.fr/" target="_blank" rel="noopener noreferrer">www.parvati-india.fr</a></p>
+                <a class="btn btn-secondary" href="https://parvati-india.fr/" target="_blank" rel="noopener noreferrer">Visiter notre site web</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="total-callout-hint" style="margin-bottom:20px">
+                <span class="hint-icon">&#128203;</span>
+                <span>
+                    <strong style="color:#ffd999">Votre total personnalis&eacute; s&rsquo;affiche ci-dessous</strong><br>
+                    Cochez les formules de spectacle et d&rsquo;initiation souhait&eacute;es &mdash; le r&eacute;capitulatif se met &agrave; jour en temps r&eacute;el.
+                </span>
+            </div>
+            <div class="global-total-banner" id="globalBanner" aria-live="polite">
+                <div class="global-total-label">R&eacute;capitulatif de votre s&eacute;lection</div>
+                <div class="global-total-items" id="globalItems">
+                    <span style="color:var(--muted);font-style:italic">Aucune prestation s&eacute;lectionn&eacute;e</span>
+                </div>
+                <div class="global-total-line">
+                    <span>Total</span>
+                    <span class="global-total-price" id="globalPrice">&mdash; EUR</span>
+                </div>
+            </div>
+            <p style="font-size:0.78rem;color:var(--muted);margin-top:10px;text-align:right">Tarifs et disponibilit&eacute;s &agrave; confirmer selon les contraintes techniques du lieu.</p>
+        </section>
+
+        <section class="section" id="validation">
+            <h2>Confirmer &amp; envoyer votre s&eacute;lection</h2>
+            <p class="lead">Votre s&eacute;lection est automatiquement enregistr&eacute;e ici et dans le pied de page &mdash; modifiable &agrave; tout moment.</p>
+
+            <div class="validation-layout">
+                <!-- Colonne gauche : récapitulatif -->
+                <div class="global-total-banner" aria-live="polite">
+                    <div class="global-total-label">R&eacute;capitulatif &agrave; envoyer</div>
+                    <div class="global-total-items" id="validationItems">
+                        <span style="color:var(--muted);font-style:italic">S&eacute;lectionnez une prestation ci-dessus</span>
+                    </div>
+                    <div class="global-total-line">
+                        <span>Total estim&eacute;</span>
+                        <span class="global-total-price" id="validationTotal">&mdash; EUR</span>
+                    </div>
+                </div>
+
+                <!-- Colonne droite : formulaire -->
+                <div class="validation-form">
+                    <input id="clientName" type="text" class="validation-input" placeholder="Votre nom / organisation *" maxlength="120" autocomplete="name">
+                    <textarea id="clientNote" class="validation-input" placeholder="Message compl&eacute;mentaire (optionnel)..." maxlength="600"></textarea>
+                    <a id="sendBtn" class="btn btn-primary" href="#" style="font-size:1rem;padding:14px 24px;gap:10px;opacity:0.45;pointer-events:none">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        Valider et envoyer ma s&eacute;lection
+                    </a>
+                    <p id="sendHint" style="font-size:0.8rem;color:var(--muted);text-align:center;margin-top:-6px">Renseignez votre nom pour activer l&rsquo;envoi.</p>
+                </div>
+            </div>
+
+            <div id="confirmedBanner" style="display:none;margin-top:28px" aria-live="polite">
+                <div style="background:linear-gradient(135deg,rgba(15,180,120,0.22),rgba(0,0,0,0.6));border:2px solid #4ecb97;border-radius:16px;padding:28px 24px">
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4ecb97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <div>
+                            <div style="font-family:'Cinzel',serif;font-size:1.3rem;font-weight:800;color:#4ecb97">S&eacute;lection confirm&eacute;e</div>
+                            <div style="font-size:0.82rem;color:#a8e8d0;margin-top:2px">Votre r&eacute;capitulatif a &eacute;t&eacute; enregistr&eacute; ci-dessous et dans le pied de page</div>
+                        </div>
+                    </div>
+                    <pre id="confirmedDetails" style="font-size:0.88rem;color:#d4f0e8;line-height:2;white-space:pre-wrap;font-family:inherit;background:rgba(0,0,0,0.3);border-radius:10px;padding:16px;border:1px solid rgba(78,203,151,0.3)"></pre>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="site-footer-grid">
+
+                <!-- Colonne 1 : identité -->
+                <div>
+                    <img class="sf-logo" src="https://parvati-india.fr/wp-content/uploads/2023/10/LOGO-PARVATI-INDIA-2.png" alt="Logo Parvati India">
+                    <p class="sf-tagline">Danse Bollywood sur Bordeaux</p>
+                    <p class="sf-sub">Spectacles &amp; Cours de danse</p>
+                    <div class="sf-address">
+                        Rue des pins<br>
+                        33290 Parempuye<br>
+                        France
+                    </div>
+                </div>
+
+                <!-- Colonne 2 : infos légales -->
+                <div>
+                    <span class="sf-col-title">Infos</span>
+                    <ul class="sf-list">
+                        <li><span><strong>SIRET&nbsp;:</strong> 852 373 570 00013</span></li>
+                        <li><span><strong>SIREN&nbsp;:</strong> 852 373 570</span></li>
+                        <li><span><strong>E-MAIL&nbsp;:</strong> <a href="mailto:contact@parvati-india.fr">contact@parvati-india.fr</a></span></li>
+                        <li><span><strong>T&eacute;l&nbsp;:</strong> <a href="tel:0631321053">06 31 32 10 53</a></span></li>
+                        <li><span>Responsable&nbsp;: Julien Guerrier</span></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 3 : liens -->
+                <div>
+                    <span class="sf-col-title">Liens utiles</span>
+                    <ul class="sf-list">
+                        <li><a href="https://parvati-india.fr/" target="_blank" rel="noopener noreferrer">www.parvati-india.fr</a></li>
+                        <li><a href="https://parvati-india.fr/mentions-legales/" target="_blank" rel="noopener noreferrer">Mentions l&eacute;gales</a></li>
+                        <li><a href="https://parvati-india.fr/politique-de-confidentialite/" target="_blank" rel="noopener noreferrer">Politique de confidentialit&eacute;</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="sfConfirmed" style="display:none" class="sf-engraved">
+                <div class="sf-engraved-title">&#9997;&#65039;&nbsp; S&eacute;lection enregistr&eacute;e</div>
+                <pre id="sfConfirmedContent" class="sf-engraved-content"></pre>
+            </div>
+
+            <div class="sf-bottom">
+                <span>&copy; 2026 Parvati India &mdash; Tous droits r&eacute;serv&eacute;s</span>
+                <span>Tarifs &agrave; confirmer selon les contraintes techniques du lieu.</span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Bulle flottante total -->
+    <div class="floating-total" id="floatingTotal" aria-live="polite" aria-label="Total sélectionné">
+        <span class="floating-total-label">Total</span>
+        <span class="floating-total-amount" id="floatingAmount">0</span>
+        <span class="floating-total-currency">EUR</span>
+    </div>
+
+<script>
+(function () {
+    /* Forcer aucune carte active au chargement */
+    document.querySelectorAll('.init-card').forEach(function(c){ c.classList.remove('active'); });
+
+    var initCards = document.querySelectorAll('.init-card[data-duration]');
+    var specCards = document.querySelectorAll('.init-card[data-type="spectacle"]');
+    var globalPrice = document.getElementById('globalPrice');
+    var globalItems = document.getElementById('globalItems');
+    var floatingTotal = document.getElementById('floatingTotal');
+    var floatingAmount = document.getElementById('floatingAmount');
+    var clientNameEl = document.getElementById('clientName');
+    var clientNoteEl = document.getElementById('clientNote');
+
+    /* État courant de la sélection, accessible aux fonctions du formulaire */
+    var lastState = { selSpec: [], selInit: [], transportFee: 30, total: 30 };
+
+    function buildMailto() {
+        var name = clientNameEl ? clientNameEl.value.trim() : '';
+        var note = clientNoteEl ? clientNoteEl.value.trim() : '';
+        var ss = lastState.selSpec;
+        var si = lastState.selInit;
+        var tf = lastState.transportFee;
+        var tot = lastState.total;
+        var lines = ['Bonjour,', '', 'Je confirme ma sélection pour la soirée d\'entreprise BPM Agency (Pullman Bordeaux, 12/12/2026, 19h00–1h00, 230 personnes) :', ''];
+        if (ss.length > 0) lines.push('- Spectacle : ' + ss[0].dataset.label + ' — ' + ss[0].dataset.detail + ' → ' + ss[0].dataset.price + ' EUR');
+        si.forEach(function (c) {
+            var dur = c.dataset.duration === '60' ? '1 heure' : '30 min';
+            lines.push('- Initiation ' + c.dataset.audience + ' · ' + dur + ' → ' + c.dataset.price + ' EUR');
+        });
+        lines.push('- Transport → ' + tf + ' EUR');
+        lines.push('');
+        lines.push('TOTAL ESTIMÉ : ' + tot + ' EUR');
+        if (note) { lines.push(''); lines.push('Message : ' + note); }
+        lines.push(''); lines.push('Cordialement,'); lines.push(name || '(nom non renseigné)');
+        var subject = 'Sélection spectacle Bollywood — BPM Agency — ' + (name || 'Client');
+        return 'mailto:contact@parvati-india.fr?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    }
+
+    function updateSendBtn() {
+        var btn = document.getElementById('sendBtn');
+        var hint = document.getElementById('sendHint');
+        if (!btn || !clientNameEl) return;
+        var name = clientNameEl.value.trim();
+        btn.href = buildMailto();
+        if (name) {
+            btn.style.opacity = '1';
+            btn.style.pointerEvents = 'auto';
+            if (hint) hint.textContent = 'Cliquez pour ouvrir votre messagerie et envoyer votre sélection.';
+        } else {
+            btn.style.opacity = '0.45';
+            btn.style.pointerEvents = 'none';
+            if (hint) hint.textContent = 'Renseignez votre nom pour activer l’envoi.';
+        }
+    }
+
+    function buildConfirmedText() {
+        var name = clientNameEl ? clientNameEl.value.trim() : '';
+        var note = clientNoteEl ? clientNoteEl.value.trim() : '';
+        var ss = lastState.selSpec;
+        var si = lastState.selInit;
+        var lines = ['Client : ' + (name || '—')];
+        if (ss.length > 0) lines.push('Spectacle : ' + ss[0].dataset.label + ' — ' + ss[0].dataset.detail + ' → ' + ss[0].dataset.price + ' EUR');
+        si.forEach(function (c) {
+            var dur = c.dataset.duration === '60' ? '1 heure' : '30 min';
+            lines.push('Initiation ' + c.dataset.audience + ' · ' + dur + ' → ' + c.dataset.price + ' EUR');
+        });
+        lines.push('Transport : ' + lastState.transportFee + ' EUR');
+        lines.push('Total estimé : ' + lastState.total + ' EUR');
+        if (note) lines.push('Message : ' + note);
+        lines.push('Envoyé le : ' + new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' }));
+        return lines.join('\n');
+    }
+
+    function showFooterConfirmed(text) {
+        var sfc = document.getElementById('sfConfirmed');
+        var sfcc = document.getElementById('sfConfirmedContent');
+        if (sfc) sfc.style.display = '';
+        if (sfcc) sfcc.textContent = text;
+    }
+
+    function getInitSelected() {
+        return Array.prototype.filter.call(initCards, function (c) { return c.classList.contains('active'); });
+    }
+
+    function getSpecSelected() {
+        return Array.prototype.filter.call(specCards, function (c) { return c.classList.contains('active'); });
+    }
+
+    function updateGlobalTotal() {
+        var selSpec = getSpecSelected();
+        var selInit = getInitSelected();
+        var specTotal = selSpec.length ? parseInt(selSpec[0].dataset.price, 10) : 0;
+        var initTotal = selInit.reduce(function (sum, c) { return sum + parseInt(c.dataset.price, 10); }, 0);
+        var transportFee = 30;
+        var total = specTotal + initTotal + transportFee;
+        lastState = { selSpec: selSpec, selInit: selInit, transportFee: transportFee, total: total };
+
+        var html = '';
+        if (selSpec.length > 0) {
+            html += '<div class="global-total-item"><span>Spectacle &middot; ' + selSpec[0].dataset.label + ' &mdash; ' + selSpec[0].dataset.detail + '</span><span class="global-total-item-price">' + specTotal + ' EUR</span></div>';
+        }
+        selInit.forEach(function (c) {
+            var dur = c.dataset.duration === '60' ? '1 heure' : '30 min';
+            html += '<div class="global-total-item"><span>Initiation &middot; ' + c.dataset.audience + ' &middot; ' + dur + '</span><span class="global-total-item-price">' + c.dataset.price + ' EUR</span></div>';
+        });
+        if (html === '') {
+            html = '<span style="color:var(--muted);font-style:italic">S&eacute;lectionnez une prestation ci-dessus</span>';
+        }
+
+        var transportLabel = '&#128663; Transport &middot; Le Pian-M&eacute;doc &harr; Pullman Bordeaux &middot; 2 voitures A/R&nbsp;<span style="font-size:0.78rem;color:rgba(255,160,80,0.8);font-weight:700">(obligatoire)</span>';
+        html += '<div class="global-total-item" style="border-color:rgba(210,157,89,0.55);background:rgba(185,13,1,0.12)"><span>' + transportLabel + '</span><span class="global-total-item-price">' + transportFee + ' EUR</span></div>';
+
+        globalPrice.style.opacity = '0';
+        requestAnimationFrame(function () {
+            globalItems.innerHTML = html;
+            /* Mirror dans la section validation */
+            var vItems = document.getElementById('validationItems');
+            var vTotal = document.getElementById('validationTotal');
+            if (vItems) vItems.innerHTML = html;
+            if (vTotal) vTotal.textContent = total + ' EUR';
+            requestAnimationFrame(function () {
+                globalPrice.textContent = total + ' EUR';
+                globalPrice.style.opacity = '1';
+            });
+        });
+
+        /* Bulle flottante */
+        floatingAmount.textContent = total;
+        floatingTotal.classList.add('visible');
+
+        /* Prix transport dans la section frais */
+        var transportDisplay = document.getElementById('transportFeeDisplay');
+        if (transportDisplay) transportDisplay.innerHTML = transportFee + '&nbsp;<span style="font-size:1rem">EUR</span>';
+
+        /* Bloc texte transport */
+        var tTitle = document.getElementById('transportTitle');
+        var tDesc  = document.getElementById('transportDesc');
+        var tChips = document.getElementById('transportChips');
+        var tCalc  = document.getElementById('transportCalc');
+        var tBox   = document.getElementById('transportBox');
+        if (tTitle) tTitle.innerHTML = '&#128663;&nbsp; Le Pian-M&eacute;doc &harr; Pullman Bordeaux &mdash; 2 voitures, aller/retour';
+        if (tDesc)  tDesc.innerHTML  = 'Trajet aller simple estim&eacute;&nbsp;: <strong>18&nbsp;km</strong>. Aller/retour par voiture&nbsp;: 36&nbsp;km. Total 2 voitures&nbsp;: <strong>72&nbsp;km</strong>.';
+        if (tChips) tChips.innerHTML = '<span class="chip">&#128205; Le Pian-M&eacute;doc</span><span class="chip">&harr;</span><span class="chip">&#128205; Pullman Bordeaux</span><span class="chip">&#10005; 2 voitures</span><span class="chip">Aller / retour</span>';
+        if (tCalc)  tCalc.innerHTML  = '72&nbsp;km &times; 0,40&nbsp;EUR/km (bar&egrave;me kilom&eacute;trique) &mdash; arrondi';
+        if (tBox)   tBox.style.borderLeftColor = 'var(--primary)';
+
+        updateSendBtn();
+    }
+
+    /* Initiations : radio par groupe de durée + toggle */
+    initCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            var duration = card.dataset.duration;
+            var wasActive = card.classList.contains('active');
+            initCards.forEach(function (c) {
+                if (c.dataset.duration === duration) c.classList.remove('active');
+            });
+            if (!wasActive) card.classList.add('active');
+            updateGlobalTotal();
+        });
+    });
+
+    /* Spectacle : radio + toggle */
+    specCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            var wasActive = card.classList.contains('active');
+            specCards.forEach(function (c) { c.classList.remove('active'); });
+            if (!wasActive) card.classList.add('active');
+            updateGlobalTotal();
+        });
+    });
+
+    /* Formulaire : persistance localStorage + activation bouton */
+    function saveFormToStorage() {
+        try {
+            localStorage.setItem('parvati_form_v2', JSON.stringify({
+                name: clientNameEl ? clientNameEl.value : '',
+                note: clientNoteEl ? clientNoteEl.value : ''
+            }));
+        } catch (e) {}
+        updateSendBtn();
+    }
+
+    if (clientNameEl) clientNameEl.addEventListener('input', saveFormToStorage);
+    if (clientNoteEl) clientNoteEl.addEventListener('input', saveFormToStorage);
+
+    /* Bouton envoyer : graver et afficher */
+    var sendBtnEl = document.getElementById('sendBtn');
+    if (sendBtnEl) {
+        sendBtnEl.addEventListener('click', function () {
+            var name = clientNameEl ? clientNameEl.value.trim() : '';
+            if (!name) return;
+            var text = buildConfirmedText();
+            try { localStorage.setItem('parvati_confirmed_v2', JSON.stringify({ text: text })); } catch (e) {}
+            var cb = document.getElementById('confirmedBanner');
+            var cd = document.getElementById('confirmedDetails');
+            if (cb) cb.style.display = '';
+            if (cd) cd.textContent = text;
+            showFooterConfirmed(text);
+        });
+    }
+
+    /* Restauration depuis localStorage au chargement */
+    (function () {
+        try {
+            var sf = localStorage.getItem('parvati_form_v2');
+            if (sf) {
+                var fd = JSON.parse(sf);
+                if (clientNameEl && fd.name) clientNameEl.value = fd.name;
+                if (clientNoteEl && fd.note) clientNoteEl.value = fd.note;
+            }
+            var sc = localStorage.getItem('parvati_confirmed_v2');
+            if (sc) {
+                var cd = JSON.parse(sc);
+                showFooterConfirmed(cd.text);
+                var cb = document.getElementById('confirmedBanner');
+                var cdEl = document.getElementById('confirmedDetails');
+                if (cb) cb.style.display = '';
+                if (cdEl) cdEl.textContent = cd.text;
+            }
+        } catch (e) {}
+    })();
+
+    updateGlobalTotal();
+})();
+</script>
+
+<script>
+/* ── Animations de sections via IntersectionObserver (pas de repaint au chargement) ── */
+(function () {
+    if (!('IntersectionObserver' in window)) return;
+    var sections = document.querySelectorAll('.section');
+    sections.forEach(function (s) { s.classList.add('will-animate'); });
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.06 });
+    sections.forEach(function (s) { observer.observe(s); });
+})();
+</script>
+
+<script>
+(function () {
+    var track    = document.getElementById('carouselTrack');
+    var prev     = document.getElementById('carouselPrev');
+    var next     = document.getElementById('carouselNext');
+    var dotsWrap = document.getElementById('carouselDots');
+    var slides   = track ? track.querySelectorAll('.carousel-slide') : [];
+    var total    = slides.length;
+    var current  = 0;
+    var timer;
+    var scrolling = false;
+
+    if (!track || total === 0) return;
+
+    /* Créer les points */
+    for (var i = 0; i < total; i++) {
+        var dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', 'Photo ' + (i + 1));
+        dot.dataset.index = i;
+        dotsWrap.appendChild(dot);
+    }
+    var dots = dotsWrap.querySelectorAll('.carousel-dot');
+
+    function updateDots(index) {
+        dots.forEach(function (d, j) { d.classList.toggle('active', j === index); });
+    }
+
+    function goTo(index) {
+        current = (index + total) % total;
+        track.scrollTo({ left: current * track.offsetWidth, behavior: 'smooth' });
+        updateDots(current);
+    }
+
+    function startAuto() {
+        clearInterval(timer);
+        timer = setInterval(function () { goTo(current + 1); }, 5000);
+    }
+
+    /* Sync dots quand l'utilisateur glisse librement */
+    track.addEventListener('scroll', function () {
+        var index = Math.round(track.scrollLeft / track.offsetWidth);
+        if (index !== current) {
+            current = index;
+            updateDots(current);
+            startAuto();
+        }
+    }, { passive: true });
+
+    prev.addEventListener('click', function () { goTo(current - 1); startAuto(); });
+    next.addEventListener('click', function () { goTo(current + 1); startAuto(); });
+
+    dots.forEach(function (dot) {
+        dot.addEventListener('click', function () { goTo(parseInt(dot.dataset.index)); startAuto(); });
+    });
+
+    startAuto();
+})();
+</script>
+</body>
+</html>
