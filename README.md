@@ -9,7 +9,7 @@ Page de devis interactive pour la **soirée d'entreprise BPM Agency**.
 - **Nombre de personnes :** 230
 - **Prestation :** spectacle de danse Bollywood
 
-Prestataire : **Parvati India** — contact@parvati-india.fr — 06 31 32 10 53
+Prestataire : **Praful, Gérant de Parvati India** — contact@parvati-india.fr — 06 31 32 10 53
 
 La page `index.html` permet de sélectionner une formule de spectacle avec uniquement des nombres
 pairs de danseuses, avec calcul automatique du total transport inclus.
