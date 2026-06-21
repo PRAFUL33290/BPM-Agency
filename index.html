@@ -399,7 +399,8 @@
             <div class="selector-row">
                 <div>
                     <div class="selector-label">Nombre de danseuses</div>
-                    <div class="selector-sub">Minimum 1 &mdash; maximum 20</div>
+                    <div class="selector-sub">Nombres impairs uniquement (1, 3, 5…) &mdash; max 19</div>
+                    <div class="selector-sub" id="dancerStep" style="color:#ffd999;font-weight:700"></div>
                 </div>
                 <div class="count-controls">
                     <button class="count-btn" id="btnMinus" aria-label="Retirer une danseuse">&#8722;</button>
@@ -503,7 +504,7 @@
 
 <script>
 (function () {
-    var MIN = 1, MAX = 20;
+    var MIN = 1, MAX = 19, STEP = 2;
     var dancers = 1;
     var praful  = true;
     var KM      = 18; /* Le Pian-Médoc → Pullman Bordeaux */
@@ -540,6 +541,7 @@
         document.getElementById('dancerNum').textContent = dancers;
         document.getElementById('btnMinus').disabled = (dancers <= MIN);
         document.getElementById('btnPlus').disabled  = (dancers >= MAX);
+        document.getElementById('dancerStep').textContent = dancers > 1 ? '(par pas de 2)' : '';
 
         /* Prix */
         document.getElementById('showLabel').textContent  = 'Spectacle — ' + lbl;
@@ -599,10 +601,10 @@
     }
 
     document.getElementById('btnMinus').addEventListener('click', function () {
-        if (dancers > MIN) { dancers--; update(); }
+        if (dancers > MIN) { dancers -= STEP; update(); }
     });
     document.getElementById('btnPlus').addEventListener('click', function () {
-        if (dancers < MAX) { dancers++; update(); }
+        if (dancers < MAX) { dancers += STEP; update(); }
     });
     document.getElementById('prafulCheck').addEventListener('change', function () {
         praful = this.checked; update();
