@@ -11,6 +11,6 @@ Page de devis interactive pour la **soirée d'entreprise BPM Agency**.
 
 Prestataire : **Parvati India** — contact@parvati-india.fr — 06 31 32 10 53
 
-La page `index.html` permet de sélectionner une formule de spectacle (et des
-initiations en option), avec calcul automatique du total transport inclus.
+La page `index.html` permet de sélectionner une formule de spectacle avec uniquement des nombres
+pairs de danseuses, avec calcul automatique du total transport inclus.
 Adaptée à partir du modèle de la Nuit des Bibliothèques.
