@@ -399,12 +399,12 @@
             <div class="selector-row">
                 <div>
                     <div class="selector-label">Nombre de danseuses</div>
-                    <div class="selector-sub">Nombres impairs uniquement (1, 3, 5…) &mdash; max 19</div>
+                    <div class="selector-sub">Nombres pairs uniquement (2, 4, 6…) &mdash; max 20</div>
                     <div class="selector-sub" id="dancerStep" style="color:#ffd999;font-weight:700"></div>
                 </div>
                 <div class="count-controls">
                     <button class="count-btn" id="btnMinus" aria-label="Retirer une danseuse">&#8722;</button>
-                    <span class="count-num" id="dancerNum">1</span>
+                    <span class="count-num" id="dancerNum">2</span>
                     <button class="count-btn" id="btnPlus" aria-label="Ajouter une danseuse">+</button>
                 </div>
             </div>
@@ -418,8 +418,8 @@
         <!-- Prix -->
         <div class="price-box">
             <div class="price-row">
-                <span id="showLabel">Spectacle &mdash; Praful + 1 danseuse</span>
-                <span class="price-val" id="showPrice">300 EUR</span>
+                <span id="showLabel">Spectacle &mdash; Praful + 2 danseuses</span>
+                <span class="price-val" id="showPrice">360 EUR</span>
             </div>
             <div class="price-row">
                 <span id="transLabel">Transport &mdash; 1 voiture, aller/retour (18 km)</span>
@@ -427,7 +427,7 @@
             </div>
             <div class="price-total-row">
                 <span>Total estim&eacute;</span>
-                <span class="price-total-val" id="totalPrice">315 EUR</span>
+                <span class="price-total-val" id="totalPrice">375 EUR</span>
             </div>
         </div>
     </section>
@@ -466,7 +466,7 @@
 
         <div class="form-summary" id="formSummary" aria-live="polite">
             <strong style="color:#ffd999">Votre s&eacute;lection&nbsp;:</strong><br>
-            <span id="summaryText">Spectacle &mdash; Praful + 1 danseuse &mdash; 300 EUR<br>Transport &mdash; 1 voiture A/R &mdash; 15 EUR<br><strong>Total&nbsp;: 315 EUR</strong></span>
+            <span id="summaryText">Spectacle &mdash; Praful + 2 danseuses &mdash; 360 EUR<br>Transport &mdash; 1 voiture A/R &mdash; 15 EUR<br><strong>Total&nbsp;: 375 EUR</strong></span>
         </div>
 
         <div class="form-grid">
@@ -504,8 +504,8 @@
 
 <script>
 (function () {
-    var MIN = 1, MAX = 19, STEP = 2;
-    var dancers = 1;
+    var MIN = 2, MAX = 20, STEP = 2;
+    var dancers = 2;
     var praful  = true;
     var KM      = 18; /* Le Pian-Médoc → Pullman Bordeaux */
 
@@ -541,7 +541,7 @@
         document.getElementById('dancerNum').textContent = dancers;
         document.getElementById('btnMinus').disabled = (dancers <= MIN);
         document.getElementById('btnPlus').disabled  = (dancers >= MAX);
-        document.getElementById('dancerStep').textContent = dancers > 1 ? '(par pas de 2)' : '';
+        document.getElementById('dancerStep').textContent = '(par pas de 2)';
 
         /* Prix */
         document.getElementById('showLabel').textContent  = 'Spectacle — ' + lbl;
