@@ -473,9 +473,9 @@
             <input id="clientName" type="text" class="form-input" placeholder="Votre nom / organisation *" maxlength="120" autocomplete="name">
             <input id="clientEmail" type="email" class="form-input" placeholder="Votre e-mail *" maxlength="200" autocomplete="email">
             <textarea id="clientNote" class="form-input" placeholder="Message compl&eacute;mentaire (optionnel)&hellip;" maxlength="600"></textarea>
-            <a id="sendBtn" class="btn btn-red" href="#" style="font-size:0.95rem;padding:13px 22px;opacity:0.4;pointer-events:none">
+            <button id="sendBtn" type="button" class="btn btn-red" style="font-size:0.95rem;padding:13px 22px;opacity:0.4;pointer-events:none;border:0;cursor:pointer">
                 &#9993;&nbsp; Envoyer ma demande par e-mail
-            </a>
+            </button>
             <p id="sendHint" style="font-size:0.8rem;color:var(--muted);text-align:center;margin-top:-6px">
                 Renseignez votre nom et votre e-mail pour activer l&rsquo;envoi.
             </p>
@@ -586,18 +586,33 @@
         return 'mailto:contact@parvati-india.fr?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
     }
 
+    function plainSummary(sp, cars, tr, tot, lbl) {
+        return [
+            '  Nombre de danseurs : ' + dancers,
+            '  Spectacle : ' + lbl + ' -> ' + sp + ' EUR',
+            '  Transport : ' + cars + ' voiture' + (cars > 1 ? 's' : '') + ' A/R (' + KM + ' km) -> ' + tr + ' EUR',
+            '  TOTAL ESTIMÉ : ' + tot + ' EUR'
+        ].join('\n');
+    }
+
+    function setSending(isSending) {
+        var btn = document.getElementById('sendBtn');
+        if (!btn) return;
+        btn.disabled = isSending;
+        btn.textContent = isSending ? 'Envoi en cours…' : '✉ Envoyer ma demande par e-mail';
+    }
+
     function updateBtn(sp, cars, tr, tot, lbl) {
         var btn  = document.getElementById('sendBtn');
         var hint = document.getElementById('sendHint');
         var name  = ((document.getElementById('clientName')  || {}).value  || '').trim();
         var email = ((document.getElementById('clientEmail') || {}).value  || '').trim();
-        btn.href = buildMailto(sp, cars, tr, tot, lbl);
-        var ok = name && email;
+        var ok = name && email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         btn.style.opacity       = ok ? '1' : '0.4';
         btn.style.pointerEvents = ok ? 'auto' : 'none';
         if (hint) hint.textContent = ok
-            ? 'Cliquez pour ouvrir votre messagerie et envoyer.'
-            : 'Renseignez votre nom et votre e-mail pour activer l’envoi.';
+            ? 'Cliquez pour envoyer directement votre demande.'
+            : 'Renseignez votre nom et une adresse e-mail valide pour activer l’envoi.';
     }
 
     document.getElementById('btnMinus').addEventListener('click', function () {
@@ -605,6 +620,54 @@
     });
     document.getElementById('btnPlus').addEventListener('click', function () {
         if (dancers < MAX) { dancers += STEP; update(); }
+    });
+    document.getElementById('sendBtn').addEventListener('click', function () {
+        var name  = ((document.getElementById('clientName')  || {}).value  || '').trim();
+        var email = ((document.getElementById('clientEmail') || {}).value  || '').trim();
+        var note  = ((document.getElementById('clientNote')  || {}).value  || '').trim();
+        var hint = document.getElementById('sendHint');
+        if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            if (hint) hint.textContent = 'Veuillez renseigner votre nom et une adresse e-mail valide.';
+            return;
+        }
+
+        var sp = showPrice(dancers);
+        var cars = carsNeeded(dancers);
+        var tr = transportCost(dancers);
+        var tot = sp + tr;
+        var lbl = artistLabel(dancers);
+
+        setSending(true);
+        if (hint) hint.textContent = 'Envoi de votre demande…';
+        fetch('send-mail.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                note: note,
+                summary: plainSummary(sp, cars, tr, tot, lbl)
+            })
+        })
+        .then(function (response) {
+            return response.json().catch(function () { return {}; }).then(function (payload) {
+                if (!response.ok || !payload.ok) throw new Error(payload.message || 'Erreur lors de l’envoi.');
+                return payload;
+            });
+        })
+        .then(function (payload) {
+            if (hint) {
+                hint.style.color = '#7ee787';
+                hint.textContent = payload.message || 'Votre demande a bien été envoyée.';
+            }
+        })
+        .catch(function (error) {
+            if (hint) {
+                hint.style.color = '#ffd999';
+                hint.innerHTML = (error.message || 'L’envoi direct a échoué.') + ' <a href="' + buildMailto(sp, cars, tr, tot, lbl).replace(/&/g, '&amp;') + '">Ouvrir votre messagerie</a>';
+            }
+        })
+        .finally(function () { setSending(false); });
     });
     ['clientName', 'clientEmail', 'clientNote'].forEach(function (id) {
         var el = document.getElementById(id);
