@@ -197,8 +197,9 @@
 
         .praful-row {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 6px 10px;
             margin-top: 14px;
             padding: 11px 14px;
             background: rgba(185,13,1,0.08);
@@ -221,7 +222,7 @@
             flex: 1;
         }
 
-        .praful-note { font-size: 0.76rem; color: var(--muted); font-style: italic; }
+        .praful-note { font-size: 0.76rem; color: var(--muted); font-style: italic; flex-basis: 100%; padding-left: 26px; }
 
         /* ── Prix ── */
         .price-box {
