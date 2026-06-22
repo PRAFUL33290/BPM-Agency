@@ -639,7 +639,7 @@
 
         setSending(true);
         if (hint) hint.textContent = 'Envoi de votre demande…';
-        fetch('send-mail.php', {
+        fetch('https://parvati-india.fr/BPM/send-mail.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
