@@ -1,4 +1,13 @@
 <?php
+header('Access-Control-Allow-Origin: https://praful33290.github.io');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
+
 header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -21,9 +30,9 @@ function clean_text($value, $max = 1000) {
     return mb_substr($value, 0, $max, 'UTF-8');
 }
 
-$name = clean_text($data['name'] ?? '', 120);
-$email = clean_text($data['email'] ?? '', 200);
-$note = clean_text($data['note'] ?? '', 600);
+$name    = clean_text($data['name']    ?? '', 120);
+$email   = clean_text($data['email']   ?? '', 200);
+$note    = clean_text($data['note']    ?? '', 600);
 $summary = clean_text($data['summary'] ?? '', 2000);
 
 if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $summary === '') {
@@ -33,12 +42,12 @@ if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $summary === '
 }
 
 $config = [
-    'host' => getenv('SMTP_HOST') ?: 'smtp.hostinger.com',
-    'port' => (int) (getenv('SMTP_PORT') ?: 465),
-    'username' => getenv('SMTP_USERNAME') ?: 'contact@parvati-india.fr',
-    'password' => getenv('SMTP_PASSWORD') ?: '',
-    'from' => getenv('SMTP_FROM') ?: 'contact@parvati-india.fr',
-    'to' => getenv('MAIL_TO') ?: 'contact@parvati-india.fr',
+    'host'     => 'smtp.hostinger.com',
+    'port'     => 465,
+    'username' => 'contact@parvati-india.fr',
+    'password' => '',
+    'from'     => 'contact@parvati-india.fr',
+    'to'       => 'contact@parvati-india.fr',
 ];
 
 $configFile = __DIR__ . '/smtp-config.php';
@@ -51,12 +60,12 @@ if (is_file($configFile)) {
 
 if (empty($config['password'])) {
     http_response_code(500);
-    echo json_encode(['ok' => false, 'message' => 'Le mot de passe SMTP n’est pas configuré sur le serveur.']);
+    echo json_encode(['ok' => false, 'message' => 'Le mot de passe SMTP n\'est pas configuré sur le serveur.']);
     exit;
 }
 
 $subject = 'Demande spectacle Bollywood — BPM Agency — 12/12/2026';
-$body = "Bonjour Praful,\n\n";
+$body  = "Bonjour Praful,\n\n";
 $body .= "Une demande a été envoyée depuis le formulaire du devis BPM Agency.\n\n";
 $body .= "Contact :\n";
 $body .= "  Nom / organisation : {$name}\n";
@@ -71,9 +80,7 @@ function smtp_read($socket) {
     $data = '';
     while (($line = fgets($socket, 515)) !== false) {
         $data .= $line;
-        if (isset($line[3]) && $line[3] === ' ') {
-            break;
-        }
+        if (isset($line[3]) && $line[3] === ' ') break;
     }
     return $data;
 }
@@ -107,7 +114,7 @@ try {
     smtp_cmd($socket, base64_encode($config['username']), 334);
     smtp_cmd($socket, base64_encode($config['password']), 235);
     smtp_cmd($socket, 'MAIL FROM:' . smtp_addr($config['from']), 250);
-    smtp_cmd($socket, 'RCPT TO:' . smtp_addr($config['to']), [250, 251]);
+    smtp_cmd($socket, 'RCPT TO:'   . smtp_addr($config['to']),   [250, 251]);
     smtp_cmd($socket, 'DATA', 354);
 
     $headers = [
@@ -126,12 +133,11 @@ try {
     smtp_cmd($socket, 'QUIT', 221);
     fclose($socket);
 
-    echo json_encode(['ok' => true, 'message' => 'Votre demande a bien été envoyée.']);
+    echo json_encode(['ok' => true, 'message' => 'Votre demande a bien été envoyée. Je vous répondrai sous 24h.']);
+
 } catch (Throwable $e) {
-    if (isset($socket) && is_resource($socket)) {
-        fclose($socket);
-    }
+    if (isset($socket) && is_resource($socket)) fclose($socket);
     error_log($e->getMessage());
     http_response_code(500);
-    echo json_encode(['ok' => false, 'message' => 'L’envoi a échoué. Vérifiez la configuration SMTP.']);
+    echo json_encode(['ok' => false, 'message' => 'L\'envoi a échoué : ' . $e->getMessage()]);
 }
