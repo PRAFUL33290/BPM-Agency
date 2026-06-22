@@ -361,7 +361,7 @@
         <img class="hero-bollywood" src="https://parvati-india.fr/wp-content/uploads/2026/01/LOGO-BOLLYWOOD.png" alt="Logo Bollywood">
         <div class="event-pill">BPM Agency &mdash; Pullman Bordeaux &mdash; 12 d&eacute;cembre 2026</div>
         <h1>Proposition de spectacle Bollywood</h1>
-        <p class="hero-sub">Un spectacle color&eacute; pour vos <strong>230 convives</strong>, de <strong>19h00 &agrave; minuit</strong>. Choisissez le nombre de danseuses et obtenez votre tarif instantan&eacute;ment, avec les frais de transport ajout&eacute;s en dessous.</p>
+        <p class="hero-sub">Un spectacle color&eacute; pour vos <strong>230 convives</strong>, de <strong>19h00 &agrave; minuit</strong>. S&eacute;lectionnez obligatoirement un nombre pair de danseurs et obtenez votre tarif instantan&eacute;ment, avec les frais de transport ajout&eacute;s en dessous.</p>
         <div class="btn-row">
             <a class="btn btn-red" href="#formulaire">Envoyer ma demande</a>
             <a class="btn btn-ghost" href="tel:0631321053">06 31 32 10 53</a>
@@ -392,33 +392,33 @@
     <!-- SPECTACLE & TARIF -->
     <section class="section" id="spectacle">
         <h2>Choisissez votre formule</h2>
-        <p class="lead">S&eacute;lectionnez le nombre de danseuses accompagnant Praful. Le tarif du spectacle et les frais de transport s&apos;affichent automatiquement en dessous.</p>
+        <p class="lead">S&eacute;lectionnez le nombre total de danseurs pour la prestation (Praful inclus). Seuls les nombres pairs sont disponibles. Le tarif du spectacle et les frais de transport s&apos;affichent automatiquement en dessous.</p>
 
         <!-- Sélecteur -->
         <div class="selector-box">
             <div class="selector-row">
                 <div>
-                    <div class="selector-label">Nombre de danseuses accompagnant Praful</div>
-                    <div class="selector-sub">1 danseuse minimum &mdash; max 20</div>
+                    <div class="selector-label">Nombre total de danseurs (Praful inclus)</div>
+                    <div class="selector-sub">2 danseurs minimum &mdash; max 20 &mdash; nombres pairs uniquement</div>
                     <div class="selector-sub" id="dancerStep" style="color:#ffd999;font-weight:700"></div>
                 </div>
                 <div class="count-controls">
-                    <button class="count-btn" id="btnMinus" aria-label="Retirer une danseuse">&#8722;</button>
-                    <span class="count-num" id="dancerNum">1</span>
-                    <button class="count-btn" id="btnPlus" aria-label="Ajouter une danseuse">+</button>
+                    <button class="count-btn" id="btnMinus" aria-label="Retirer deux danseurs">&#8722;</button>
+                    <span class="count-num" id="dancerNum">2</span>
+                    <button class="count-btn" id="btnPlus" aria-label="Ajouter deux danseurs">+</button>
                 </div>
             </div>
             <div class="praful-row">
-                <input type="checkbox" id="prafulCheck" checked>
-                <label for="prafulCheck">Inclure <strong>Praful, G&eacute;rant de Parvati India</strong></label>
-                <span class="praful-note">Sans suppl&eacute;ment</span>
+                <span class="cond-icon" aria-hidden="true">&#128100;</span>
+                <label>Praful est inclus dans chaque formule. La base comprend Praful + 1 danseuse.</label>
+                <span class="praful-note">+60 EUR par danseur suppl&eacute;mentaire</span>
             </div>
         </div>
 
         <!-- Prix -->
         <div class="price-box">
             <div class="price-row">
-                <span id="showLabel">Spectacle &mdash; Praful + 1 danseuse</span>
+                <span id="showLabel">Spectacle &mdash; 2 danseurs (Praful + 1 danseuse)</span>
                 <span class="price-val" id="showPrice">300 EUR</span>
             </div>
             <div class="price-row">
@@ -462,11 +462,11 @@
     <!-- FORMULAIRE -->
     <section class="section" id="formulaire">
         <h2>Envoyer votre demande</h2>
-        <p class="lead">Renseignez vos informations ci-dessous. Un r&eacute;capitulatif complet sera inclus dans votre e-mail.</p>
+        <p class="lead">Renseignez vos informations ci-dessous apr&egrave;s avoir s&eacute;lectionn&eacute; le nombre de danseurs. Un r&eacute;capitulatif complet sera inclus dans votre e-mail.</p>
 
         <div class="form-summary" id="formSummary" aria-live="polite">
             <strong style="color:#ffd999">Votre s&eacute;lection&nbsp;:</strong><br>
-            <span id="summaryText">Spectacle &mdash; Praful + 1 danseuse &mdash; 300 EUR<br>Transport &mdash; 1 voiture A/R &mdash; 15 EUR<br><strong>Total&nbsp;: 315 EUR</strong></span>
+            <span id="summaryText">Spectacle &mdash; 2 danseurs (Praful + 1 danseuse) &mdash; 300 EUR<br>Transport &mdash; 1 voiture A/R &mdash; 15 EUR<br><strong>Total&nbsp;: 315 EUR</strong></span>
         </div>
 
         <div class="form-grid">
@@ -504,19 +504,17 @@
 
 <script>
 (function () {
-    var MIN = 1, MAX = 20, STEP = 1;
-    var dancers = 1;
-    var praful  = true;
+    var MIN = 2, MAX = 20, STEP = 2;
+    var dancers = 2;
     var KM      = 18; /* Le Pian-Médoc → Pullman Bordeaux */
 
     function showPrice(n) {
-        return 300 + Math.max(0, n - 1) * 60;
+        return 300 + Math.max(0, n - 2) * 60;
     }
 
     function carsNeeded(n) {
-        /* total artists = n + (praful ? 1 : 0), 5 per car, min 1 */
-        var total = n + (praful ? 1 : 0);
-        return Math.max(1, Math.ceil(total / 5));
+        /* n = total artists, 5 per car, min 1 */
+        return Math.max(1, Math.ceil(n / 5));
     }
 
     function transportCost(n) {
@@ -526,8 +524,8 @@
     }
 
     function artistLabel(n) {
-        var base = n + ' danseuse' + (n > 1 ? 's' : '');
-        return praful ? 'Praful + ' + base : base;
+        if (n === 2) { return '2 danseurs (Praful + 1 danseuse)'; }
+        return n + ' danseurs (Praful inclus)';
     }
 
     function update() {
@@ -541,7 +539,7 @@
         document.getElementById('dancerNum').textContent = dancers;
         document.getElementById('btnMinus').disabled = (dancers <= MIN);
         document.getElementById('btnPlus').disabled  = (dancers >= MAX);
-        document.getElementById('dancerStep').textContent = '(300 EUR pour Praful + 1 danseuse)';
+        document.getElementById('dancerStep').textContent = '(300 EUR pour 2 danseurs, puis +60 EUR par danseur supplémentaire)';
 
         /* Prix */
         document.getElementById('showLabel').textContent  = 'Spectacle — ' + lbl;
@@ -567,6 +565,7 @@
             'Bonjour Praful,',
             '',
             'Je souhaite réserver un spectacle Bollywood pour la soirée BPM Agency.',
+            'J’ai sélectionné le nombre de danseurs souhaité dans le formulaire.',
             '',
             'Détails de l’événement :',
             '  Lieu    : Pullman Bordeaux, 33300 Bordeaux',
@@ -575,6 +574,7 @@
             '  Public  : 230 personnes',
             '',
             'Ma sélection :',
+            '  Nombre de danseurs : ' + dancers,
             '  Spectacle : ' + lbl + ' → ' + sp + ' EUR',
             '  Transport : ' + cars + ' voiture' + (cars > 1 ? 's' : '') + ' A/R (' + KM + ' km) → ' + tr + ' EUR',
             '  TOTAL ESTIMÉ : ' + tot + ' EUR',
@@ -606,10 +606,6 @@
     document.getElementById('btnPlus').addEventListener('click', function () {
         if (dancers < MAX) { dancers += STEP; update(); }
     });
-    document.getElementById('prafulCheck').addEventListener('change', function () {
-        praful = this.checked; update();
-    });
-
     ['clientName', 'clientEmail', 'clientNote'].forEach(function (id) {
         var el = document.getElementById(id);
         if (el) el.addEventListener('input', update);
